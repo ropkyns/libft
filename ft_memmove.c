@@ -42,7 +42,8 @@ void * ft_memmove(void * dest, void * src, size_t n)
     }
     return (dest);
 }
-int main(void)
+
+/*int main(void)
 {
     char src[50];
     char dst[50];
@@ -51,4 +52,4 @@ int main(void)
 	ft_memmove(dst, src, 5);
 	puts(dst);
 	return (0);
-}
+}*/
