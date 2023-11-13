@@ -25,11 +25,11 @@ size_t ft_strlen(char * str)
     return (i);
 }
 
-int main(void)
+/*int main(void)
 {
     char *str = "23nfvnniv";
     
     printf("%lu", ft_strlen(str));
     printf("%lu", strlen(str));
     return 0;
-}
+}*/
