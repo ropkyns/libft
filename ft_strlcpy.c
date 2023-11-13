@@ -12,13 +12,35 @@
 
 #include <stdio.h>
 #include <bsd/string.h>
-int main(void)
+
+size_t ft_strlcpy(char *dst, const char *src, size_t lendst);
+
+size_t ft_strlcpy(char *dst, const char *src, size_t lendst)
 {
-    char * src = "42 Paris cursus";
-    char * dst[50];
-    size_t len = 5;
-    puts(src);
-    strlcpy(dst, src, len);
-    puts(dst);
-    return(0);
+    size_t i;
+
+    i = 0;
+    if (lendst < 1)
+        return(0);
+    while(i < (lendst-1) && src[i])
+    {
+        dst[i] = src[i];
+        i++;
+    }
+    dst[i] = '\0';
+    return(lendst);
+}
+
+int		main(void)
+{
+	char	dest[50];
+	char	*src;
+	int		size;
+
+	src = "ceci est un test";
+	size = 10;
+	printf("%zu\n", ft_strlcpy(dest, src, size));
+	printf(".%s.\n\n", dest);
+	//printf("%lu\n", strlcpy(dest, src, size));
+	printf(".%s.\n\n", dest);
 }
