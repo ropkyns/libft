@@ -1,36 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 14:54:07 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/14 13:47:39 by paulmart         ###   ########.fr       */
+/*   Created: 2023/11/14 14:52:42 by paulmart          #+#    #+#             */
+/*   Updated: 2023/11/14 15:39:06 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 #include "libft.h"
 
-size_t ft_strlen(const char * str);
+void * ft_memchr(const void * mem, int c, size_t n);
 
-size_t ft_strlen(const char * str)
+void * ft_memchr(const void * mem, int c, size_t n)
 {
-    int i;
+    size_t i;
 
     i = 0;
-    while (str[i] != '\0')
+    while(i < n)
+    {
+        if(*(unsigned char *)mem + i == (unsigned char)c)
+            return((unsigned char *)mem + i);
         i++;
-    return (i);
+    }
+    return (NULL);
 }
 
-/* int main(void)
+int main()
 {
-    char *str = "23nfvnniv";
-    
-    printf("%lu", ft_strlen(str));
-    printf("%lu", strlen(str));
-    return 0;
-} */
+    const void  *s = "ABFDEF";
+    int c = 70;
+    size_t  n = 6;
+    char    *sn;
+
+    sn = ft_memchr(s, c, n);
+    printf("Result: %s\n", sn);
+    return (0);
+}

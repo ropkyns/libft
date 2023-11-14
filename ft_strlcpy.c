@@ -6,12 +6,13 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:03:58 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/09 15:22:26 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/13 14:52:35 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <bsd/string.h>
+#include "libft.h"
 
 size_t ft_strlcpy(char *dst, const char *src, size_t lendst);
 

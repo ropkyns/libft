@@ -12,10 +12,11 @@
 
 #include <stdio.h>
 #include <strings.h>
+#include "libft.h"
 
-void ft_bzero.c(void *str, size_t n);
+void ft_bzero(void *str, size_t n);
 
-void ft_bzero.c(void *str, size_t n)
+void ft_bzero(void *str, size_t n)
 {
     int i;
 
@@ -28,9 +29,9 @@ void ft_bzero.c(void *str, size_t n)
     }
 }
 
-int main(void)
+/* int main(void)
 {
     char *str = "42 cursus go";
     bzero(str, 4);
     printf("%s", str);
-}
+} */

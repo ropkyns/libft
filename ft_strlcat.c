@@ -6,12 +6,13 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:14:48 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/13 14:04:19 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/13 15:59:29 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 size_t ft_strlcat(char *dst, const char *src, size_t n);
 
@@ -22,8 +23,8 @@ size_t ft_strlcat(char *dst, const char *src, size_t n)
     size_t tsrc;
 
     i = 0;
-    tdst = strlen(dst);
-    tsrc = strlen(src);
+    tdst = ft_strlen(dst);
+    tsrc = ft_strlen(src);
     if(tdst >= (n-1))
         return(0);
     while((tdst + i) < (n-1) && src[i])

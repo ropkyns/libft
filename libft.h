@@ -6,11 +6,11 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:14:21 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/13 14:14:21 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/14 13:48:56 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_bzero.c(void *str, size_t n);
+void ft_bzero(void *str, size_t n);
 int ft_isalpha(int c);
 int ft_isalnum(int c);
 int ft_isascii(int c);
@@ -21,4 +21,7 @@ void * ft_memmove(void * dest, void * src, size_t n);
 void * ft_memset (void * pointer, int value, size_t n);
 size_t ft_strlcat(char *dst, const char *src, size_t n);
 size_t ft_strlcpy(char *dst, const char *src, size_t lendst);
-size_t ft_strlen(char * str);
+size_t ft_strlen(const char * str);
+int ft_toupper (int c);
+int ft_tolower(int c);
+char * ft_strrchr(const char * str, int c);

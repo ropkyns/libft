@@ -6,12 +6,13 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:16:58 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/09 12:38:52 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/14 13:12:25 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 void * ft_memset (void * pointer, int value, size_t n);
 
