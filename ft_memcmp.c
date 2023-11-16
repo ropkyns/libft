@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 14:09:35 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/16 12:34:41 by paulmart         ###   ########.fr       */
+/*   Created: 2023/11/16 12:23:54 by paulmart          #+#    #+#             */
+/*   Updated: 2023/11/16 13:02:34 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,21 @@
 #include <string.h>
 #include "libft.h"
 
-int ft_strncmp(const char *first, const char * second, int len);
+int ft_memcmp(const void * pointer1, const void * pointer2, size_t n);
 
-int ft_strncmp(const char *first, const char * second, int len)
+int ft_memcmp(const void * pointer1, const void * pointer2, size_t n)
 {
-    char * f;
-    char * s;
-    int i;
-    
-    f = (char *)first;
-    s = (char *)second;
+    size_t i;
+    const unsigned char * ptr1;
+    const unsigned char * ptr2;
+
     i = 0;
-    if(first == NULL || second == NULL)
-        return(0);
-    while(i < len)
+    ptr1 = (const unsigned char *)pointer1;
+    ptr2 = (const unsigned char *)pointer2;
+    while(n > i)
     {
-        if(f[i] != s[i])
-            return(f[i] - s[i]);
+        if(ptr1[i] != ptr2[i])
+            return(ptr1[i] - ptr2[i]);
         i++;
     }
     return(0);
@@ -41,6 +39,6 @@ int main(void)
     char * chou = "clem";
     char * quette = "ence";
 
-    printf("%d", ft_strncmp(chou, quette, 3));
+    printf("%d", ft_memcmp(chou, quette, 4));
     return(0);
 }

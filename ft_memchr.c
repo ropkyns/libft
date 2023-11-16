@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:52:42 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/14 15:39:06 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/16 13:29:16 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@
 
 void * ft_memchr(const void * mem, int c, size_t n);
 
-void * ft_memchr(const void * mem, int c, size_t n)
+void * ft_memchr(const void * memoryblock, int c, size_t n)
 {
     size_t i;
+    unsigned char mem;
 
     i = 0;
+    mem = (unsigned char *)memoryblock;
     while(i < n)
     {
         if(*(unsigned char *)mem + i == (unsigned char)c)

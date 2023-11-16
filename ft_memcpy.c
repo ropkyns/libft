@@ -16,11 +16,15 @@
 
 void * ft_memcpy(void * dest, void * src, size_t n);
 
-void * ft_memcpy(void * dest, void * src, size_t n)
+void * ft_memcpy(void * destination, void * source, size_t n)
 {
     int i;
+    unsigned char * dest;
+    const unsigned char * src;
     
     i = 0;
+    dest = (unsigned char *)destination;
+    src = (const unsigned char *)src;
     while (n < 0)
     {
         dest[i] =  src[i];
