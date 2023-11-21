@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:12:47 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/16 13:41:56 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:03:38 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,14 @@ int	ft_atoi(const char *str)
 	int	nb;
 
 	i = 0;
-	signe = 1;
+	signe = 0;
 	nb = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	if(str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			signe *= -1;
+			signe = -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
@@ -43,7 +42,9 @@ int	ft_atoi(const char *str)
 
 int	main(void)
 {
-	printf("42:%d\n", ft_atoi("  \n  42t4457"));
+	printf("0:%d\n", ft_atoi(""));
+	printf("0:%d\n", atoi(""));
+/* 	printf("42:%d\n", ft_atoi("  \n  42t4457"));
 	printf("-42:%d\n", ft_atoi(" --+-42sfs:f545"));
 	printf("0:%d\n", ft_atoi("\0 1337"));
 	printf("0:%d\n", ft_atoi("-0"));
@@ -51,5 +52,5 @@ int	main(void)
 	printf("-1325632167:%d\n", ft_atoi("-1325632167"));
 	printf("-100:%d\n", ft_atoi("-100"));
 	printf("min:%d\n", ft_atoi("\t---+2147483648"));
-	printf("max:%d\n", ft_atoi("\v2147483647"));
+	printf("max:%d\n", ft_atoi("\v2147483647")); */
 }

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:37:50 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/14 14:06:05 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/21 17:25:59 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-/* #include "libft.h" */
+#include "libft.h"
 
 char * ft_strchr(const char * str, int c);
 

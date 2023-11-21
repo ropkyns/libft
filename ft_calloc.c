@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 13:54:29 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/21 17:26:03 by ropkyns          ###   ########.fr       */
+/*   Created: 2023/11/21 15:23:33 by ropkyns           #+#    #+#             */
+/*   Updated: 2023/11/21 17:26:15 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stlib.h>
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *));
+void *calloc(size_t nmemb, size_t size);
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void *calloc(size_t nmemb, size_t size)
 {
-    int i;
-    int len;
-
-    i = 0;
-    len = ft_strlen(s);
-    if(s != NULL && f != NULL)
-    while(i < len)
-    {
-        (*f) (len, s)
-        i++;
-        s++;
-    }
+    void * ptr;
+    ptr = malloc(sizeof(size) * nmeb);
+    if (ptr == NULL || nmeb == 0 || size == 0)
+        return(NULL)
+    ft_bzero(ptr, nmeb);
+    return(ptr);
 }
