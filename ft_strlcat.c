@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:14:48 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/13 15:59:29 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/22 18:44:53 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t n)
     dst[tdst + i] = '\0';
     return(tdst  +tsrc);
 }
-int				main(void)
+int main(void)
 {
 	char			dest[50] = "sefsfesa";
 	char			src[50] = "bvfvbf";

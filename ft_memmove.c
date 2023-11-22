@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:37:56 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/16 13:26:04 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/22 18:44:47 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include <string.h>
 #include "libft.h"
 
-void * ft_memmove(void * dest, void * src, size_t n);
+void * ft_memmove(void *dest, const void *src, size_t n);
 
-void * ft_memmove(void * dest, void * src, size_t n)
+void * ft_memmove(void *dest, const void *src, size_t n)
 {
     unsigned char * d;
     const unsigned char * s;

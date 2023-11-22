@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:14:21 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/21 18:06:14 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/11/22 12:08:02 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # ifndef _LIBFT_H_
 #define _LIBFT_H_
-#include <stdlib.h>
+#include <stdio.h>
 #include <unistd.h>
 #include <string.h>
 
