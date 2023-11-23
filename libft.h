@@ -6,13 +6,15 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:14:21 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/22 12:08:02 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/23 12:50:39 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # ifndef _LIBFT_H_
 #define _LIBFT_H_
+
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
 
