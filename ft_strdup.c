@@ -6,13 +6,11 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 11:29:12 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/22 14:37:37 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/23 17:22:58 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
-#include <stdio.h>
 
 char * ft_strdup(const char *s);
 
@@ -22,7 +20,7 @@ char * ft_strdup(const char *s)
     size_t len;
 
     len = strlen((char *)s);
-    dup = malloc(sizeof(char *) * len);
+    dup = malloc(sizeof(char) * len);
     if(dup == NULL)
         return(NULL);
     memcpy(dup, (char *)s, len);

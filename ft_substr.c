@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 14:42:25 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/22 18:45:06 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/23 13:58:48 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     len_s = strlen((char *)s);
     if(len_s < start + len)
         return(NULL);
-    sub = malloc(sizeof(char *) * len);
+    sub = malloc(sizeof(char) * len);
     if(sub == NULL)
         return(NULL);
     i = start;
