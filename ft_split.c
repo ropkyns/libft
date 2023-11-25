@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 13:24:22 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/23 17:22:57 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/24 13:06:31 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char **ft_split(char const *s, char c);
 
-char ** ft_allocf(char ** splited, int i,)
+char ** ft_allocf(char ** splited, int i)
 {
     i--;
     while(i >= 0)
@@ -42,19 +42,25 @@ int countwords(char *s, char c)
 
 char * splup(char * s, int i, int c)
 {
-    int j;
+    int sep;
     char * dup;
+    int j;
 
-    j = i;
-    while(s[j] != c && s[j])
-        j++;
-    dup = malloc(sizeof(char) * (j - i));
-    while(i < j)
+    sep = i;
+    while(s[sep] != c && s[sep])
+        sep++;
+    dup = malloc(sizeof(char) * (sep - i + 1));
+    j = 0;
+    if(!dup)
+        return(NULL);
+    while(i < sep)
     {
-        *dup = s[i];
-        dup++;
+        dup[j] = s[i];
+        j++;
+        i++;
     }
-    return(dup)
+    dup[j] = '\0';
+    return(dup);
 }
 
 char **ft_split(char const *s, char c)
@@ -64,25 +70,28 @@ char **ft_split(char const *s, char c)
     int i;
     int j;
 
+    i = 0;
+    j = 0;
     count = countwords((char *)s, c);
-    splited = malloc(sizeof(char *) * count);
+    splited = malloc(sizeof(char *) * (count + 1));
     if(splited)
     {
-        i = 0;
-        j = 0
         while((char)s[i])
         {
-            while((char)s[i] == c)
-                i++;
+            while((char)s[i] == c && (char)s[i])
+            i++;
             splited[j] = splup((char *)s, i, c);
-            if(!splited[j])
-                    return(ft_allocf(splited, i));
-            while((char)s[i] != c)
+            if(!(splited[j]))
+                return(ft_allocf(splited, i));
+            while((char)s[i] != c && (char)s[i])
                 i++;
+            j++;
         }
+        splited[j] = 0;
     }
     return(splited);
 }
+
 
 int main(void)
 {
@@ -91,30 +100,8 @@ int main(void)
     char ** split = ft_split(str, ',');
     while(split[i])
     {
-        printf("%s,", split[i]);
+        printf("%s\n", split[i]);
         i++;
     }
     return(0);
 }
-
-            /* if((char)s[j] == c)
-            {
-                if(j > 0)
-                    i++;
-                j++;
-            }
-            else
-            {
-                
-                k = 0;
-                while((char)s[j] != c && (char)s[j])
-                {
-                    word[k] = (char)s[j];
-                    j++;
-                    k++;
-                }
-                splited[i] = strdup(word);
-                if(!splited[i])
-                    return(ft_allocf(splited, i));
-                i++;
-            } */
