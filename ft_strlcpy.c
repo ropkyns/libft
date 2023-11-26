@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:03:58 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/13 14:52:35 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:37:09 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t lendst)
     return(lendst);
 }
 
-int		main(void)
+/* int		main(void)
 {
 	char	dest[50];
 	char	*src;
@@ -44,4 +44,4 @@ int		main(void)
 	printf(".%s.\n\n", dest);
 	//printf("%lu\n", strlcpy(dest, src, size));
 	printf(".%s.\n\n", dest);
-}
+} */

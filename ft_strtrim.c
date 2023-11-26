@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 11:45:11 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/23 12:52:51 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:37:01 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char *ft_strtrim(char const *s, char const *set)
     return(trim);
 }
 
-int main(void)
+/* int main(void)
 {
     char * c = "lollloool TEST TEST looolLLlol";
     char * set = "lol";
@@ -63,4 +63,4 @@ int main(void)
     printf("set : %s\n", set);
     printf("trimmed : %s", ft_strtrim(c, set));
     return(0);
-}
+} */

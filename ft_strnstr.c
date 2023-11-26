@@ -6,33 +6,32 @@
 /*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 19:18:50 by ropkyns           #+#    #+#             */
-/*   Updated: 2023/11/21 17:26:09 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/11/26 18:50:36 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <bsd/string.h>
+#include "libft.h"
 
-char * ft_strnstr(const char * big, const char * lil, size_t len);
+char * ft_strnstr(const char * big, const char * little, size_t n);
 
-char * ft_strnstr(const char * big, const char * lil, size_t len)
+char * ft_strnstr(const char * big, const char * little, size_t n)
 {
     size_t i;
-    char * large;
-    char * small;
 
-    large = (char *)big;
-    if(small == NULL || ft_strlen(small) == 0)
-        return(big);
-    if(ft_strlen(small) > n)
+    if(little == NULL || ft_strlen(little) == 0)
+        return((char *)big);
+    if(ft_strlen(little) > n)
         return(NULL);
     i = 0;
-    while(large[i] != '\0' && i < len)
+    while(i < n)
     {
-        if(ft_strncmp(*large[i], small, ft_strlen(small)) == 0)
-            return(small);
+        if(ft_memcmp(&big[i], (char *)little, ft_strlen(little)) == 0)
+        {
+            if(i + ft_strlen(little) > n)
+                return((char *)little);
+            return((char *)&big[i]);
+        }
         i++;
     }
     return(NULL);
-    
 }

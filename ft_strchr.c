@@ -6,7 +6,7 @@
 /*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:37:50 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/21 17:25:59 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/11/26 14:37:22 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char * ft_strchr(const char * str, int c)
     return(dup);
 }
 
-int main(void)
+/* int main(void)
 {
     char * str = "Ceci n'est pas un test.";
     char clem = 'z';
@@ -43,4 +43,4 @@ int main(void)
     printf("on cherche: %c\n",clem);
     printf("on trouve: %s\n",strchr(str, clem));
     return(0);
-}
+} */

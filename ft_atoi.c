@@ -6,7 +6,7 @@
 /*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:12:47 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/21 18:03:38 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/11/26 14:36:55 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ int	ft_atoi(const char *str)
 	return (nb * signe);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	printf("0:%d\n", ft_atoi(""));
 	printf("0:%d\n", atoi(""));
-/* 	printf("42:%d\n", ft_atoi("  \n  42t4457"));
+ 	printf("42:%d\n", ft_atoi("  \n  42t4457"));
 	printf("-42:%d\n", ft_atoi(" --+-42sfs:f545"));
 	printf("0:%d\n", ft_atoi("\0 1337"));
 	printf("0:%d\n", ft_atoi("-0"));
@@ -52,5 +52,5 @@ int	main(void)
 	printf("-1325632167:%d\n", ft_atoi("-1325632167"));
 	printf("-100:%d\n", ft_atoi("-100"));
 	printf("min:%d\n", ft_atoi("\t---+2147483648"));
-	printf("max:%d\n", ft_atoi("\v2147483647")); */
-}
+	printf("max:%d\n", ft_atoi("\v2147483647"));
+} */

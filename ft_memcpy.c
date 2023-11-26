@@ -14,7 +14,7 @@
 #include <string.h>
 #include "libft.h"
 
-void * ft_memcpy(void * dest, void * src, size_t n);
+void * ft_memcpy(void * destination, void * source, size_t n);
 
 void * ft_memcpy(void * destination, void * source, size_t n)
 {
@@ -24,19 +24,20 @@ void * ft_memcpy(void * destination, void * source, size_t n)
     
     i = 0;
     dest = (unsigned char *)destination;
-    src = (const unsigned char *)src;
-    while (n < 0)
+    src = (const unsigned char *)source;
+    while (n > 0)
     {
         dest[i] =  src[i];
         i++;
         n--;
     }
+    return(dest);
 }
 
-int main(void)
+/* int main(void)
 {
     char *src = "g,biogfjm"
     int n = 5;
 
     char *dest = ft_memcpy(dest, src, n);
-}
+} */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 09:09:33 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/14 10:26:56 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:36:40 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int ft_toupper(int c)
     return((unsigned char)c);
 }
 
-int main(void)
+/* int main(void)
 {
     char c = '?';
     char d = '\0';
@@ -35,4 +35,4 @@ int main(void)
     printf("%c\n",d);
     printf("%c\n",c);
     return(0);
-}
+} */

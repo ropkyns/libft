@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 11:29:12 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/23 17:22:58 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:37:25 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ char * ft_strdup(const char *s)
     return(dup);
 }
 
-int main(void)
+/* int main(void)
 {
     char * s = "Ceci est un test";
 
     printf("ma fonction : %s\n longueur : %lu", ft_strdup(s), strlen(ft_strdup(s)));
     printf("\nfonction original : %s\n longueur : %lu",strdup(s), strlen(strdup(s)));
-}
+} */

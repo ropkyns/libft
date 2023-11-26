@@ -6,7 +6,7 @@
 /*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 13:14:31 by ropkyns           #+#    #+#             */
-/*   Updated: 2023/11/25 16:08:23 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/11/26 14:37:27 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,9 @@ char *ft_itoa(int n)
     return(c);
 }
 
-int main(void)
+/* int main(void)
 {
     int n = -340;
     printf("%s\n", ft_itoa(n));
     return(0);
-}
+} */

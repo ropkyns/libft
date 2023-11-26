@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:14:48 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/22 18:44:53 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:37:10 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t n)
     dst[tdst + i] = '\0';
     return(tdst  +tsrc);
 }
-int main(void)
+/* int main(void)
 {
 	char			dest[50] = "sefsfesa";
 	char			src[50] = "bvfvbf";
@@ -45,4 +45,4 @@ int main(void)
 //	printf("%lu\n", strlcat(dest, src, size));
 	printf("%zu\n", ft_strlcat(dest, src, size));
 	printf("dest: %s\nsrc: %s\n", dest, src);
-}
+} */

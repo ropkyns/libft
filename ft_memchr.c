@@ -3,23 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:52:42 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/16 13:29:16 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/26 19:28:32 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-void * ft_memchr(const void * mem, int c, size_t n);
+void * ft_memchr(const void * memoryblock, int c, size_t n);
 
 void * ft_memchr(const void * memoryblock, int c, size_t n)
 {
     size_t i;
-    unsigned char mem;
+    unsigned char * mem;
 
     i = 0;
     mem = (unsigned char *)memoryblock;
@@ -32,7 +30,7 @@ void * ft_memchr(const void * memoryblock, int c, size_t n)
     return (NULL);
 }
 
-int main()
+/* int main()
 {
     const void  *s = "ABFDEF";
     int c = 70;
@@ -42,4 +40,4 @@ int main()
     sn = ft_memchr(s, c, n);
     printf("Result: %s\n", sn);
     return (0);
-}
+} */

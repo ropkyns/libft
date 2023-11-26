@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 12:23:54 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/16 13:02:34 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:37:31 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ int ft_memcmp(const void * pointer1, const void * pointer2, size_t n)
     return(0);
 }
 
-int main(void)
+/* int main(void)
 {
     char * chou = "clem";
     char * quette = "ence";
 
     printf("%d", ft_memcmp(chou, quette, 4));
     return(0);
-}
+} */

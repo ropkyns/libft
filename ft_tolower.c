@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:24:11 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/23 15:02:34 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:36:57 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int ft_tolower(int c)
     return((unsigned char)c);
 }
 
-int main(void)
+/* int main(void)
 {
     char c = '?';
     char d = '\0';
@@ -36,4 +36,4 @@ int main(void)
     printf("%c\n",d);
     printf("%c\n",c);
     return(0);
-}
+} */

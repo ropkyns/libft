@@ -6,7 +6,7 @@
 /*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 13:24:22 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/24 13:06:31 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/11/26 14:37:21 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ char **ft_split(char const *s, char c)
 }
 
 
-int main(void)
+/* int main(void)
 {
     int i = 0;
     char * str = "lun,mar,mer,jeu,ven,sam,dim";
@@ -104,4 +104,4 @@ int main(void)
         i++;
     }
     return(0);
-}
+} */

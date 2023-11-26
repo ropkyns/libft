@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:09:35 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/22 18:45:11 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:37:05 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ int ft_strncmp(const char *first, const char * second, int len)
     return(0);
 }
 
-int main(void)
+/* int main(void)
 {
     char * chou = "clem";
     char * quette = "ence";
 
     printf("%d", ft_strncmp(chou, quette, 3));
     return(0);
-}
+} */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 14:42:25 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/23 13:58:48 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:36:59 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     return(sub);
 }
 
-int main(void)
+/* int main(void)
 {
     char * s = "Ceci est un test";
     printf("%lu\n", strlen(s));
     printf("%s\n%s", s, ft_substr(s, 12, 4));
     return(0);
-}
+} */

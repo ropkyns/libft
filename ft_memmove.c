@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:37:56 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/22 18:44:47 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:37:32 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void * ft_memmove(void *dest, const void *src, size_t n)
     }
     return (dest);
 }
-int main(void)
+/* int main(void)
 {
     char src[50];
     char dst[50];
@@ -52,4 +52,4 @@ int main(void)
 	ft_memmove(dst, src, 5);
 	puts(dst);
 	return (0);
-}
+} */

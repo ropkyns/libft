@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:31:28 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/14 14:06:57 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:37:03 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char * ft_strrchr(const char * str, int c)
     return(dup);
 }
 
-int main(void)
+/* int main(void)
 {
     char * str = "Va te faire tapper par des mammouths";
     char clem = 'y';
@@ -43,4 +43,4 @@ int main(void)
     printf("on cherche: %c\n",clem);
     printf("on trouve: %s\n",strrchr(str, clem));
     return(0);
-}
+} */
