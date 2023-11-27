@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:24:11 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/26 14:36:57 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/11/27 13:02:52 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-/* #include "libft.h"
-*/
+
 
 int ft_tolower(int c);
 

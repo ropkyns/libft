@@ -3,27 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:31:28 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/26 14:37:03 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/11/27 14:26:31 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-char * ft_strrchr(const char * str, int c);
+char * ft_strrchr( const char * string, int searchedChar );
 
-char * ft_strrchr(const char * str, int c)
+char * ft_strrchr( const char * string, int searchedChar )
 {
     char * dup;
 
-    dup = (char *)str + strlen(str);
-    while(*dup != c)
+    dup = (char *)string + strlen(string);
+    while(*dup != searchedChar)
     {
-        if(dup == str)
+        if(dup == string)
             return(NULL);
         dup--;
     }

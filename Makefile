@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+         #
+#    By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/25 17:11:17 by ropkyns           #+#    #+#              #
-#    Updated: 2023/11/27 00:03:01 by ropkyns          ###   ########.fr        #
+#    Updated: 2023/11/27 14:30:43 by paulmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,15 +47,15 @@ SRCS			=	ft_atoi.c \
 
 
 OBJS			= $(SRCS:.c=.o)
-
+HEADER			= libt.h
 CC				= gcc
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror
 
 NAME			= libft.a
 
-.c.o: 
-		$(CC) -I. $(CFLAGS) -c $< -o ${<:.c=.o}
+.c.o: 			$(HEADER)
+				$(CC) -I. $(CFLAGS) -c $< -o ${<:.c=.o}
 
 $(NAME):		$(OBJS)
 				ar rcs $(NAME) $?

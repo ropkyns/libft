@@ -10,34 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-void * ft_memcpy(void * destination, void * source, size_t n);
+void *ft_memcpy(void *dest, const void *src, size_t n);
 
-void * ft_memcpy(void * destination, void * source, size_t n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
     int i;
-    unsigned char * dest;
-    const unsigned char * src;
+    unsigned char * destination;
+    const unsigned char * source;
     
     i = 0;
-    dest = (unsigned char *)destination;
-    src = (const unsigned char *)source;
+    destination = (unsigned char *)dest;
+    source = (const unsigned char *)src;
     while (n > 0)
     {
-        dest[i] =  src[i];
+        destination[i] =  source[i];
         i++;
         n--;
     }
-    return(dest);
+    return(destination);
 }
 
 /* int main(void)
 {
-    char *src = "g,biogfjm"
+    char *source = "g,biogfjm"
     int n = 5;
 
-    char *dest = ft_memcpy(dest, src, n);
+    char *destination = ft_memcpy(destination, source, n);
 } */

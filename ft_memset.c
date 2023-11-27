@@ -6,28 +6,26 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:16:58 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/22 18:44:49 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/27 14:21:18 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-void * ft_memset (void * pointer, int value, size_t n);
+void * ft_memset (void *s, int c, size_t n);
 
-void * ft_memset (void * pointer, int value, size_t n)
+void * ft_memset (void * s, int c, size_t n)
 {
     char * str;
 
-    str = pointer;
+    str = s;
     while (n)
     {
-        *str = (unsigned char)value;
+        *str = (unsigned char)c;
         str++;
         n--;
     }
-    return (pointer);
+    return (s);
 }
 
 /* int main(void)

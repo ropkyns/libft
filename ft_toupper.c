@@ -3,17 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 09:09:33 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/26 14:36:40 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/11/27 13:03:09 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-/* #include "libft.h"
- */
+#include "libft.h"
+
 int ft_toupper (int c);
 
 int ft_toupper(int c)
