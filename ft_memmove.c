@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:37:56 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/27 17:18:35 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/28 11:37:52 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ void *ft_memmove(void *dest, const void *src, size_t n)
     if(d > s)
     {
         while(++i <= n)
-        {
             d[n - i] = s[n - i];
-        }
     }
     else
     {

@@ -6,12 +6,10 @@
 /*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:14:48 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/26 14:37:10 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/11/28 15:09:17 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 size_t ft_strlcat(char *dst, const char *src, size_t n);
@@ -19,21 +17,21 @@ size_t ft_strlcat(char *dst, const char *src, size_t n);
 size_t ft_strlcat(char *dst, const char *src, size_t n)
 {
     size_t i;
-    size_t tdst;
-    size_t tsrc;
+    size_t lendst;
+    size_t lensrc;
 
     i = 0;
-    tdst = ft_strlen(dst);
-    tsrc = ft_strlen(src);
-    if(tdst >= (n-1))
-        return(0);
-    while((tdst + i) < (n-1) && src[i])
+    lendst = ft_strlen(dst);
+    lensrc = ft_strlen(src);
+    if(((lendst >= (n-1)) && ((lensrc + n) < (lendst + lensrc))) || (n == 0))
+        return(lensrc + n);
+    while((lendst + i) < (n-1) && src[i] != '\0')
     {
-        dst[tdst + i] = src[i];
+        dst[lendst + i] = (char)src[i];
         i++;
     }
-    dst[tdst + i] = '\0';
-    return(tdst  +tsrc);
+    dst[lendst + i] = '\0';
+    return(lendst + lensrc);
 }
 /* int main(void)
 {
