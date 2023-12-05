@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 13:14:31 by ropkyns           #+#    #+#             */
-/*   Updated: 2023/11/27 12:55:29 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/11/30 12:43:03 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ int intlen(int n)
 
 char *ft_itoa(int n)
 {
-    int len;
-    char * c;
-    int neg;
-    long num;
+    int     len;
+    char    *c;
+    int     neg;
+    long    num;
 
     len = intlen(n);
     neg = 0;

@@ -6,7 +6,7 @@
 /*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:52:05 by ropkyns           #+#    #+#             */
-/*   Updated: 2023/11/26 19:26:48 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/12/04 12:44:32 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@ void ft_putstr_fd(char *s, int fd);
 
 void ft_putstr_fd(char *s, int fd)
 {
-    int len;
+    int i;
 
-    len = strlen(s);
-    while(s[len])
+    if (s == NULL)
+        return ;
+    i = 0;
+    while(s[i])
     {
-        write(fd, &s[len], 1);
+        write(fd, &s[i], 1);
+        i++;
     }
 }
