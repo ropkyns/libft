@@ -6,7 +6,7 @@
 /*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 13:24:22 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/05 17:46:55 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/12/06 00:15:55 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,24 @@ static  char ** ft_allocf(char ** splited, int i)
     }
     return(NULL);
 }
-static int countwords(char const *s, char c)
-{
-    int count;
-    int i;
 
-    count = 0;
+static int    count_words(const char *str, char charset)
+{
+    int    i;
+    int    words;
+
     i = 0;
-    while(s[i])
+    words = 0;
+    while (str[i])
     {
-        if(s[i] != c && s[i-1] == c)
-            count++;
-        i++;
+        while (str[i] != '\0' && str[i] == charset)
+            i++;
+        if (str[i] != '\0')
+            words++;
+        while (str[i] != '\0' && str[i] != charset)
+            i++;
     }
-    return(count);
+    return (words);
 }
 
 static char * splup(char * s, int i, int c)
@@ -72,11 +76,11 @@ char **ft_split(char const *s, char c)
 
     i = 0;
     j = 0;
-    count = countwords(s, c);
-    splited = malloc(sizeof(char *) * (count + 1));
+    count = count_words(s, c);
+    splited = (char **)malloc(sizeof(char *) * (count + 1));
     if (!splited)
         return (NULL);
-    while ((char)s[i])
+    while (s[i])
     {
         while (s[i] == c && s[i])
             i++;
