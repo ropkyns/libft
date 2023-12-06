@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 09:09:33 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/27 13:03:09 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/06 16:50:01 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int ft_toupper(int c)
 {
     if ((c >= 'a' && c <= 'z'))
         c -= 32;
-    return((unsigned char)c);
+    return(c);
 }
 
 /* int main(void)

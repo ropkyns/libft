@@ -6,20 +6,20 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:37:50 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/27 14:26:26 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/06 17:33:46 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char * ft_strchr( const char * string, int searchedChar );
+char * ft_strchr( const char * s, int c );
 
-char * ft_strchr( const char * string, int searchedChar )
+char * ft_strchr( const char * s, int c )
 {
     char * dup;
 
-    dup = (char *)string;
-    while(*dup != searchedChar)
+    dup = (char *)s;
+    while(*dup != c)
     {
         if(*dup == '\0')
             return(NULL);

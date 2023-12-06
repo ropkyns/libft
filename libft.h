@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:14:21 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/05 14:29:43 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/12/06 17:35:40 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
 void ft_putstr_fd(char *s, int fd);
 char **ft_split(char const *s, char c);
-char * ft_strchr( const char * string, int searchedChar );
+char * ft_strchr( const char * s, int c );
 char * ft_strdup(const char *s);
 void ft_striteri(char *s, void (*f)(unsigned int, char *));
 char *ft_strjoin(char const *s1, char const *s2);
@@ -47,7 +47,7 @@ size_t ft_strlen(const char * str);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int ft_strncmp(const char *first, const char * second, int len);
 char * ft_strnstr(const char *big,	const char *little, size_t len);
-char * ft_strrchr( const char * string, int searchedChar );
+char * ft_strrchr( const char * s, int c );
 char *ft_strtrim(char const *s1, char const *set);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 int ft_toupper (int c);

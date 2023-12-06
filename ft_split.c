@@ -3,14 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 13:24:22 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/06 00:15:55 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/12/06 17:33:53 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char **ft_split(char const *s, char c);
+
+static  int is_c (char str, char c)
+{
+    if (str == c)
+        return (1);
+    return (0);
+}
 
 char **ft_split(char const *s, char c);
 
@@ -25,7 +34,7 @@ static  char ** ft_allocf(char ** splited, int i)
     return(NULL);
 }
 
-static int    count_words(const char *str, char charset)
+static int    count_words(const char *str, char c)
 {
     int    i;
     int    words;
@@ -34,24 +43,24 @@ static int    count_words(const char *str, char charset)
     words = 0;
     while (str[i])
     {
-        while (str[i] != '\0' && str[i] == charset)
+        while (str[i] != '\0' && is_c(str[i], c) == 1)
             i++;
         if (str[i] != '\0')
             words++;
-        while (str[i] != '\0' && str[i] != charset)
+        while (str[i] != '\0' && is_c(str[i], c) == 0)
             i++;
     }
     return (words);
 }
 
-static char * splup(char * s, int i, int c)
+static char *splup(char * s, int i, int c)
 {
     int sep;
     char * dup;
     int j;
 
     sep = i;
-    while (s[sep] != c && s[sep])
+    while (is_c(s[sep], c) == 0 && s[sep])
         sep++;
     dup = malloc(sizeof(char) * (sep - i + 1));
     j = 0;
@@ -82,19 +91,19 @@ char **ft_split(char const *s, char c)
         return (NULL);
     while (s[i])
     {
-        while (s[i] == c && s[i])
+        while (is_c(s[i], c) == 1 && s[i])
             i++;
         if (s[i])
         {
             splited[j] = splup((char *)s, i, c);
             if (!(splited[j]))
                 return(ft_allocf(splited, i));
+            j++;
         }
-        while (s[i] != c && s[i])
+        while (is_c(s[i], c) == 0 && s[i])
             i++;
-        j++;
     }
-    splited[j] = NULL;
+    splited[j] = 0;
     return (splited);
 }
 

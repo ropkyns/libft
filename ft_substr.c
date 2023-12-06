@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 14:42:25 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/29 21:38:16 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/12/06 15:50:29 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*sub;
-	unsigned int	i;
-	unsigned int	j;
+	char		*sub;
+	size_t		i;
+	size_t		slen;
 
-if(start >= ft_strlen(s))
-	{
-		sub = malloc(sizeof(char) * 1);
-		if(!sub)
-			return(NULL);
-		sub[0] = 0;
-		return(sub);
-	}
+	slen = ft_strlen(s);
+	if (start > slen)
+		len = 0;
+	else if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
 	sub = malloc(sizeof(char) * (len + 1));
-	if (sub == NULL || !s)
+	if (!sub)
 		return (NULL);
 	i = 0;
-	j = start;
-	while (s[j] && i < len && len > 0 && (char)s[start])
+	while (start + i < slen && i < len)
 	{
-		sub[i] = (char)s[j];
+		sub[i] = s[start + i];
 		i++;
-		j++;
 	}
 	sub[i] = '\0';
 	return (sub);

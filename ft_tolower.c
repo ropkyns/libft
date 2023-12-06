@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:24:11 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/27 13:02:52 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/06 16:49:53 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int ft_tolower(int c)
 {
     if ((c >= 'A' && c <= 'Z'))
         c += 32;
-    return((unsigned char)c);
+    return(c);
 }
 
 /* int main(void)
