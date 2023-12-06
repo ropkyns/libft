@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:14:21 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/06 17:35:40 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/06 19:04:11 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@
 #include <string.h>
 
 int	ft_atoi(const char *str);
-void ft_bzero(void *str, size_t n);
-void *ft_calloc(size_t number, size_t size);
-int ft_isalpha(int c);
+void	ft_bzero(void *str, size_t n);
+void	*ft_calloc(size_t number, size_t size);
 int ft_isalnum(int c);
-int ft_isascii(int c);
-int ft_isdigit(int c);
-int ft_isprint(int c);
-char *ft_itoa(int n);
-void *ft_memchr(const void *s, int c, size_t n);
-int ft_memcmp(const void * pointer1, const void * pointer2, size_t n);
-void *ft_memcpy(void *dest, const void *src, size_t n);
-void *ft_memmove(void *dest, const void *src, size_t n);
-void * ft_memset (void * pointer, int value, size_t n);
+int	ft_isalpha(int c);
+int	ft_isascii(int c);
+int	ft_isdigit(int c);
+int	ft_isprint(int c);
+char	*ft_itoa(int n);
+void	*ft_memchr(const void *s, int c, size_t n);
+int	ft_memcmp(const void *pointer1, const void *pointer2, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+void	*ft_memset(void *s, int c, size_t n);
 void ft_putchar_fd(char c, int fd);
 void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);

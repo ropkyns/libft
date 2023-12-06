@@ -3,55 +3,55 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 11:45:11 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/28 20:48:32 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/12/06 18:57:35 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set);
+char	*ft_strtrim(char const *s1, char const *set);
 
-int ft_check(char * set, char c)
+int	ft_check(char * set, char c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(set[i])
-    {
-        if(set[i] == c)
-            return(1);
-        i++;
-    }
-    return(0);
+	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
 }
 
-char *ft_strtrim(char const *s, char const *set)
+char	*ft_strtrim(char const *s, char const *set)
 {
-    int start;
-    int end;
-    char * trim;
-    int i;
+	int		start;
+	int		end;
+	char	*trim;
+	int		i;
 
-    start = 0;
-    while(ft_check((char *)set, (char)s[start]) != 0 && (char)s[start])
-        start++;
-    end = strlen((char *)s) -1;
-    while(ft_check((char *)set, (char)s[end]) != 0 && end > 0)
-        end--;
-    if(end == 0)
-        trim = malloc(sizeof(char)* 1);
-    else
-        trim = malloc(sizeof(char) * ((end - start) + 2));
-    if(!trim)
-        return(NULL);
-    i = 0;
-    while(start <= end)
-        trim[i++] = (char)s[start++];
-    trim[i] = '\0';
-    return(trim);
+	start = 0;
+	while (ft_check((char *)set, (char)s[start]) != 0 && (char)s[start])
+		start++;
+	end = strlen((char *)s) -1;
+	while (ft_check((char *)set, (char)s[end]) != 0 && end > 0)
+		end--;
+	if (end == 0)
+		trim = malloc(sizeof(char)* 1);
+	else
+		trim = malloc(sizeof(char) * ((end - start) + 2));
+	if (!trim)
+		return (NULL);
+	i = 0;
+	while (start <= end)
+		trim[i++] = (char)s[start++];
+	trim[i] = '\0';
+	return (trim);
 }
 
 /* int main(void)

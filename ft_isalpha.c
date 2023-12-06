@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:52:06 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/26 14:36:53 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/12/06 18:15:13 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 #include <stdio.h>
 #include "libft.h"
 
-int ft_isalpha(int c);
+int	ft_isalpha(int c);
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')))
-        return 1024;
-    else
-        return 0;
+	if (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')))
+		return (1024);
+	else
+		return (0);
 }
 
 /* int main(void)

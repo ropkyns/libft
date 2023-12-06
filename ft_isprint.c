@@ -6,22 +6,20 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:01:53 by paulmart          #+#    #+#             */
-/*   Updated: 2023/11/13 14:52:40 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/06 18:28:23 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
 #include "libft.h"
 
-int ft_isprint(int c);
+int	ft_isprint(int c);
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if ((c >= 32) && (c <= 126))
-        return (16348);
-    else
-        return (0);
+	if ((c >= 32) && (c <= 126))
+		return (16348);
+	else
+		return (0);
 }
 
 /* int main(void)

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 12:45:13 by ropkyns           #+#    #+#             */
-/*   Updated: 2023/12/03 19:59:19 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/12/06 18:31:44 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 void	ft_putnbr_fd(int n, int fd)
 {
