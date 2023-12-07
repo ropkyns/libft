@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 13:24:22 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/06 18:39:42 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/06 22:16:48 by ropkyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static char	*splup(char *s, int i, int c)
 	{
 		dup[j] = s[i];
 		j++;
-	i++;
+		i++;
 	}
 	dup[j] = '\0';
 	return (dup);
@@ -93,9 +93,10 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (s[i])
 		{
-			splited[++j] = splup((char *)s, i, c);
+			splited[j] = splup((char *)s, i, c);
 			if (!(splited[j]))
 				return (ft_allocf(splited, i));
+			j++;
 		}
 		while (is_c(s[i], c) == 0 && s[i])
 			i++;
