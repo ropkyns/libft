@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 11:29:12 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/06 18:41:37 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/07 16:34:52 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@ char	*ft_strdup(const char *s)
 	size_t	len;
 
 	len = ft_strlen((char *)s);
-	dup = malloc(sizeof(char) * len);
+	dup = malloc(sizeof(char) * (len + 1));
 	if (dup == NULL)
 		return (NULL);
 	ft_memcpy(dup, (char *)s, len);
+	dup[len] = '\0';
 	return (dup);
 }

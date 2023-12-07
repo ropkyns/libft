@@ -6,11 +6,11 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:24:11 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/06 18:58:13 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/07 17:19:01 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "libft.h"
 
 int	ft_tolower(int c);
 

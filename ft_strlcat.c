@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:14:48 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/06 18:47:53 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/07 17:25:46 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	i = 0;
 	lendst = ft_strlen(dst);
 	lensrc = ft_strlen(src);
-	if (((lendst >= (n-1)) && ((lensrc + n) < (lendst + lensrc))) || (n == 0))
+	if (((lendst >= (n - 1)) && ((lensrc + n) < (lendst + lensrc))) || (n == 0))
 		return (lensrc + n);
-	while ((lendst + i) < (n-1) && src[i] != '\0')
+	while ((lendst + i) < (n - 1) && src[i] != '\0')
 	{
 		dst[lendst + i] = (char)src[i];
 		i++;

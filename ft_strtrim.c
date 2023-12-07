@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 11:45:11 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/06 18:57:35 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/07 17:19:31 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strtrim(char const *s1, char const *set);
 
-int	ft_check(char * set, char c)
+int	ft_check(char *set, char c)
 {
 	int	i;
 
@@ -38,11 +38,11 @@ char	*ft_strtrim(char const *s, char const *set)
 	start = 0;
 	while (ft_check((char *)set, (char)s[start]) != 0 && (char)s[start])
 		start++;
-	end = strlen((char *)s) -1;
+	end = ft_strlen((char *)s) - 1;
 	while (ft_check((char *)set, (char)s[end]) != 0 && end > 0)
 		end--;
 	if (end == 0)
-		trim = malloc(sizeof(char)* 1);
+		trim = malloc(sizeof(char) * 1);
 	else
 		trim = malloc(sizeof(char) * ((end - start) + 2));
 	if (!trim)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 13:24:22 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/06 22:16:48 by ropkyns          ###   ########.fr       */
+/*   Updated: 2023/12/07 17:42:32 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,15 @@ static int	is_c(char str, char c)
 	return (0);
 }
 
-static char	**ft_allocf(char **splited, int i)
+static char	**ft_allocf(char **splited)
 {
-	i--;
-	while (i >= 0)
+	int	i;
+
+	i = 0;
+	while (splited[i])
 	{
 		free(splited[i]);
-		i--;
+		i++;
 	}
 	return (NULL);
 }
@@ -51,24 +53,23 @@ static int	count_words(const char *str, char c)
 	return (words);
 }
 
-static char	*splup(char *s, int i, int c)
+static char	*splup(char *s, int c)
 {
 	int		sep;
 	char	*dup;
 	int		j;
 
-	sep = i;
+	sep = 0;
 	while (is_c(s[sep], c) == 0 && s[sep])
 		sep++;
-	dup = malloc(sizeof(char) * (sep - i + 1));
+	dup = malloc(sizeof(char) * (sep + 1));
 	j = 0;
 	if (!dup)
 		return (NULL);
-	while (i < sep)
+	while (j < sep)
 	{
-		dup[j] = s[i];
+		dup[j] = s[j];
 		j++;
-		i++;
 	}
 	dup[j] = '\0';
 	return (dup);
@@ -78,28 +79,26 @@ char	**ft_split(char const *s, char c)
 {
 	char	**splited;
 	int		count;
-	int		i;
 	int		j;
 
-	i = 0;
 	j = 0;
 	count = count_words(s, c);
 	splited = (char **)malloc(sizeof(char *) * (count + 1));
 	if (!splited)
 		return (NULL);
-	while (s[i])
+	while (*s)
 	{
-		while (is_c(s[i], c) == 1 && s[i])
-			i++;
-		if (s[i])
+		while (is_c(*s, c) == 1 && *s)
+			s++;
+		if (*s)
 		{
-			splited[j] = splup((char *)s, i, c);
+			splited[j] = splup((char *)s, c);
 			if (!(splited[j]))
-				return (ft_allocf(splited, i));
+				return (ft_allocf(splited));
 			j++;
 		}
-		while (is_c(s[i], c) == 0 && s[i])
-			i++;
+		while (is_c(*s, c) == 0 && *s)
+			s++;
 	}
 	return (splited[j] = 0, splited);
 }

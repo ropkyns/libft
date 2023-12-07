@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:03:58 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/06 18:48:27 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/07 17:25:47 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t lendst)
 	i = 0;
 	if (lendst != 0)
 	{
-		while ((i < (lendst-1)) && src[i] != '\0')
+		while ((i < (lendst - 1)) && src[i] != '\0')
 		{
 			dst[i] = (char)src[i];
 			i++;

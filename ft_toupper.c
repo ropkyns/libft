@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 09:09:33 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/06 18:10:59 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/07 12:49:59 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,5 @@ int	ft_toupper(int c)
 	printf("%c\n",d);
 	printf("%c\n",c);
 	return(0);
-} */
+} 
+*/
