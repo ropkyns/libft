@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 19:00:37 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/07 19:01:07 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/08 14:25:56 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-
+	if (!lst || !del)
+		return ;
+	while (*lst -> next)
+	{
+		ft_lstdelone(*lst, del);
+		*lst = *lst -> next;
+	}
+	*lst = NULL;
 }

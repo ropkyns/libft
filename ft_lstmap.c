@@ -6,7 +6,7 @@
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 19:02:56 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/07 19:03:50 by paulmart         ###   ########.fr       */
+/*   Updated: 2023/12/08 14:53:30 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,19 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
+	t_list	newlst;
 
+	newlst = NULL;
+	if (!lst || !f || !del)
+		return (NULL);
+	while (lst)
+	{
+		newlst = ft_lstnew(f(lst -> content));
+		if (!newlst)
+		{
+			ft_lstclear(&newlst, del)
+			return (NULL);
+		}
+		lst = lst -> next;
+	}
 }
