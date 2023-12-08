@@ -22,7 +22,7 @@ static int	intlen(int n)
 	len = 0;
 	num = n;
 	if (n == 0)
-	len++;
+		len++;
 	if (n < 0)
 	{
 		len++;

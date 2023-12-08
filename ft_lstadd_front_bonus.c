@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/07 19:02:56 by paulmart          #+#    #+#             */
-/*   Updated: 2023/12/08 14:53:30 by paulmart         ###   ########.fr       */
+/*   Created: 2023/12/08 12:10:26 by paulmart          #+#    #+#             */
+/*   Updated: 2023/12/08 13:15:02 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	newlst;
-
-	newlst = NULL;
-	if (!lst || !f || !del)
-		return (NULL);
-	while (lst)
-	{
-		newlst = ft_lstnew(f(lst -> content));
-		if (!newlst)
-		{
-			ft_lstclear(&newlst, del)
-			return (NULL);
-		}
-		lst = lst -> next;
-	}
+	if (!new || !lst)
+		return ;
+	new -> next = *lst;
+	*lst = new;
 }
